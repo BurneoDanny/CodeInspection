@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class EmailApp {
 
+	private EmailApp() {
+		// Constructor privado para evitar la instanciación
+	}
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -19,7 +23,7 @@ public class EmailApp {
 		sc.close();
 
 		Email email = new Email(firstName, lastName);
-		email.setDeparment(depChoice);
+		email.setDepartment(depChoice);
 		email.generateEmail();
 		email.showInfo();
 	}
